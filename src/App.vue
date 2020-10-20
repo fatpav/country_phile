@@ -1,28 +1,31 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="html">
+<div>
+  <h1>Buy some stuff, Stoopid.</h1>
+  <shopping-list-item></shopping-list-item>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ShoppingListItem from './components/ShoppingListItem.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
+  data () {
+    return {
+      items : [
+        {name: 'Rusks', isPurchased: false},
+        {name: 'Whisky', isPurchased: false},
+        {name: 'Cocaine', isPurchased: false}
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    'shopping-list-item': ShoppingListItem
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
