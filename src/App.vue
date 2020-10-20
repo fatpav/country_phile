@@ -1,7 +1,7 @@
 <template lang="html">
 <div>
   <h1>Buy some stuff, Stoopid.</h1>
-  <shopping-list-item></shopping-list-item>
+  <shopping-list-item v-for='(item, index) in items' :key='index' :item='item'></shopping-list-item>
 </div>
 </template>
 
